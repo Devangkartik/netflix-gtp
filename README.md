@@ -3,17 +3,17 @@
   - Configure Tailwind Css in our app
   - What you want to build just go on that website
      and see the fiture what you want to build...
-  -When you are planning Properly then It will become
+  - When you are planning Properly then It will become
     More eiser to building website...
   -
 
 
   # Features
-  -Login and SignIn/SignUp Page
+-Login and SignIn/SignUp Page
 - Browser(after Authintication)
   - logOut
-   -logo of Netflix + different movies background picture
-   -A Sign in page + which change the route when you Sign in
+    -logo of Netflix + different movies background picture
+    -A Sign in page + which change the route when you Sign in
   -logIn
     -Header
     -Main movie
@@ -23,8 +23,8 @@
            -movie list + which is vertical scrollable
 
 -NetflixGtp
-  -Search Bar
-  -movie Suggestion
+  - Search Bar
+  - movie Suggestion
 
 
        -
