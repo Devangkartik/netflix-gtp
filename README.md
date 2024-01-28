@@ -5,7 +5,16 @@
      and see the fiture what you want to build...
   - When you are planning Properly then It will become
     More eiser to building website...
-  -
+  - Header
+  - Routing
+  - LogIn form
+  - Sign up form
+  - Form Validation / useRef
+  - Add google firebase setup
+  - Deploying our app to production
+  - Create Signup user in firebase / web moduler api
+  - Reading documentation is the superpower of a developers 
+  - 
 
 
   # Features
