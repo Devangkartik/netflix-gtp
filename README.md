@@ -1,4 +1,5 @@
 # Netflix-gtp React Project
+    # LINK TO REACH ON NETFLIX WEB -  https://netflix-gpt-bfb2a.web.app
   - Create React App
   - Configure Tailwind Css in our app
   - What you want to build just go on that website
@@ -14,6 +15,8 @@
   - Deploying our app to production
   - Create Signup user in firebase / web moduler api
   - Reading documentation is the superpower of a developers 
+  - Create Redux Store With userSlice
+  - disPatch and action  with createUserEmailandPassword
   - 
 
 

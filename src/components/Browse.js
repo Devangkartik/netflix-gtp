@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Browse = () => {
   return (
-    <div className='font-extrabold'>Browse</div>
+    <div className=''>
+      <Header/>
+    </div>
   )
 }
 
