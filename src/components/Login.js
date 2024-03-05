@@ -3,16 +3,15 @@ import Header from './Header'
 import {checkValidData} from '../utils/validation'
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword ,updateProfile} from "firebase/auth";
 import {auth} from '../utils/firebase'
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-
+import { userLogo,bgImage } from '../utils/constants';
 
 const Login = () =>{
     const [isSignInForm , setIsSignInForm] = useState(true)
     const [errorMessage , setErrorMessage] = useState(null);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    
 
  const email = useRef(null)
  const password = useRef(null)
@@ -34,7 +33,7 @@ const Login = () =>{
   .then((userCredential) => {
     const  user =  userCredential.user;
     updateProfile(user, {
-      displayName: name.current.value , photoURL: "https://avatars.githubusercontent.com/u/93068034?v=4"
+      displayName: name.current.value , photoURL: {userLogo}
     }).then(() => {
       const {uid,email,displayName,photoURL} = auth.currentUser;
       dispatch(addUser({
@@ -43,13 +42,10 @@ const Login = () =>{
         displayName : displayName,
         photoURL : photoURL
       }));
-            navigate('/browse')
-      // Profile updated!
-      // ...
+     console.log(user);
     }).catch((error) => {
       setErrorMessage(error.message)
-      // An error occurred
-      // ...
+     
     });
   })
   .catch((error) => {
@@ -62,31 +58,14 @@ const Login = () =>{
            signInWithEmailAndPassword(auth,email.current.value,password.current.value)
   .then((userCredential) => {
     const user = userCredential.user;
-    updateProfile(user, {
-      displayName: name.current.value , photoURL: "https://avatars.githubusercontent.com/u/93068034?v=4"
-    }).then(() => {
-      const {uid,email,displayName,photoURL} = auth.currentUser;
-      dispatch(addUser({
-        uid : uid,
-        email : email,
-        displayName : displayName,
-        photoURL : photoURL
-      }));
-            navigate('/browse')
-      // Profile updated!
-      // ...
-    }).catch((error) => {
-      setErrorMessage(error.message)
-      // An error occurred
-      // ...
-    });
-  })
+        console.log(user);
+  }) 
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode +"-"+ errorMessage)
   });
-
+  
   }
  }
 
@@ -98,7 +77,7 @@ const Login = () =>{
         <div> 
             <div className='absolute '>
             <Header/>
-                 <img className='' src="https://assets.nflxext.com/ffe/siteui/vlv3/16006346-87f9-4226-bc25-a1fb346a2b0c/9662d0fd-0547-4665-b887-771617268815/IN-en-20240115-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="backgroung/img"  />
+                 <img className='' src={bgImage} alt="backgroung/img"  />
             </div>
             <form onSubmit={(e)=>e.preventDefault()} className='w-3/12  absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
                 <h1 className='font-bold mb-4 text-3xl'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>

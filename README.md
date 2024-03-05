@@ -17,7 +17,14 @@
   - Reading documentation is the superpower of a developers 
   - Create Redux Store With userSlice
   - disPatch and action  with createUserEmailandPassword
-  - 
+  - Update Profile within OnAuthStateChange function
+  - Bugfix:- Sign up user DisplayName and Profile Picture update
+  - Bugfix : if the user not loged in Redirect  /browser to LogInPage
+  -Unsubscribe our OnAuthStateChanged Callback function
+  - Add Hardedcoded values to the constants file
+  - Rgistered TMDB values to the Constants file & get access Token
+  -Get data from the TMDB now playing movies list API
+  -
 
 
   # Features
