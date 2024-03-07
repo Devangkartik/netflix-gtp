@@ -42,7 +42,7 @@ const Login = () =>{
         displayName : displayName,
         photoURL : photoURL
       }));
-     console.log(user);
+     
     }).catch((error) => {
       setErrorMessage(error.message)
      
