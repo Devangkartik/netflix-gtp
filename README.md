@@ -1,5 +1,5 @@
 # Netflix-gtp React Project
-    # LINK TO REACH ON NETFLIX WEB -  https://netflix-gpt-bfb2a.web.app
+    # LINK TO REACH ON NETFLIX WEB - https://netflix-gtp.vercel.app/
   - Create React App
   - Configure Tailwind Css in our app
   - What you want to build just go on that website
@@ -20,14 +20,21 @@
   - Update Profile within OnAuthStateChange function
   - Bugfix:- Sign up user DisplayName and Profile Picture update
   - Bugfix : if the user not loged in Redirect  /browser to LogInPage
-  -Unsubscribe our OnAuthStateChanged Callback function
+  - Unsubscribe our OnAuthStateChanged Callback function
   - Add Hardedcoded values to the constants file
   - Rgistered TMDB values to the Constants file & get access Token
-  -Get data from the TMDB now playing movies list API
-  -
-
+  - Get data from the TMDB now playing movies list API
+  - create movieSlice
+  - Update store  with movies Data
+  - Planing for MainContainer & Secondary Container
+  - fetch data for tailer video
+  - upadate  store with trailer video data
+  - Embaded the youtube video  and make it autoplay and mute
+  - tailwind classes to make Main Container look awesome
+  - 
 
   # Features
+
 -Login and SignIn/SignUp Page
 - Browser(after Authintication)
   - logOut
@@ -38,8 +45,8 @@
     -Main movie
        -Trailer in Background
        -Movie Tittle in description
-       -Movie Suggestion
-           -movie list + which is vertical scrollable
+         -Movie Suggestion * n number of rows
+         -movie card list + which is vertical scrollable
 
 -NetflixGtp
   - Search Bar

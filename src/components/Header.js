@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 const Header = () =>{
     const user = useSelector(store => store.user)
     const navigate = useNavigate();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const handleSignOut = ()=>{
         signOut(auth).then(() => {
              navigate('/')
