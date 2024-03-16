@@ -17,7 +17,7 @@ const useMovieTrailer = (movieId) =>{
      
       const filterData = data.results.filter((video) => video.name === "Official Trailer")
       const trailer  = filterData.length ? filterData[0] : data.results[0];
-      console.log(trailer);   
+      
      //  setTrailerId(trailer.key)
      dispatch(addTrailerVideo(trailer))
      }

@@ -31,6 +31,9 @@
   - upadate  store with trailer video data
   - Embaded the youtube video  and make it autoplay and mute
   - tailwind classes to make Main Container look awesome
+  - Build Secondary Component 
+  - Movie list : Popular list , NowPlaying movie , Tranding list , ;
+  - Each  Movie List have n number of movie card 
   - 
 
   # Features
