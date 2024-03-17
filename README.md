@@ -34,7 +34,12 @@
   - Build Secondary Component 
   - Movie list : Popular list , NowPlaying movie , Tranding list , ;
   - Each  Movie List have n number of movie card 
-  - 
+  - Seconadary container filled with data
+  - Build movie list 
+  - Build movie Card 
+  - Tmdb image CDN url 
+  - made the Browser page amazing with the use of tailwind css
+  - usePopular movies custom hook
 
   # Features
 
