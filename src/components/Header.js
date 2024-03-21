@@ -12,13 +12,11 @@ const Header = () =>{
     const user = useSelector(store => store.user)
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const handleSignOut = ()=>{
-        signOut(auth).then(() => {
-             navigate('/')
-          // Sign-out successful.
-        }).catch((error) => {
-            navigate('/error')
-          // An error happened.
+    const handleSignOut = () => {
+      signOut(auth)
+        .then(() => {})
+        .catch((error) => {
+          navigate("/error");
         });
     }
 
@@ -43,10 +41,10 @@ const Header = () =>{
     },[])
     return(
         <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black flex justify-between '>
-            <img className='w-48 ' src={logo} alt='Netflix.png'/>
+            <img className='w-48 z-30 ' src={logo} alt='Netflix.png'/>
           {user &&  <div className='flex p-2 '>
                <img className="m-2 w-12 h-12 rounded-xl "  src= {user.photoURL} alt="usericon" />
-               <button className='text-white bg-red-700 rounded-lg p-2 m-2 hover:border-red-500' onClick={handleSignOut}>Sign out</button>
+               <button className='text-white bg-red-700 rounded-lg p-2 m-2 hover:border-red-500' onClick={handleSignOut} >Sign out</button>
             </div> }
         </div>
       
