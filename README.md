@@ -46,8 +46,9 @@
   - first we create a button on the top insidde the header
   - WE are build the search bar 
   - buttom of the search bar give the movie suggestion 
+  - Multilangual features in our app
+  - integrate gtp  API
   - 
-
 
 
   # Features
