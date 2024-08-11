@@ -40,6 +40,16 @@
   - Tmdb image CDN url 
   - made the Browser page amazing with the use of tailwind css
   - usePopular movies custom hook
+  - useTrendingMovies custom hook
+  - uesUpcoming movies custom hook 
+  - plan for Chatgtp(open AI gtp api) Search page 
+  - first we create a button on the top insidde the header
+  - WE are build the search bar 
+  - buttom of the search bar give the movie suggestion 
+  - Multilangual features in our app
+  - integrate gtp  API
+  - 
+
 
   # Features
 
