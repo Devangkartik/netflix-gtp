@@ -9,13 +9,14 @@ import { addUser, removeUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import { toggleGtpSearchView } from '../utils/gtpSlice';
 import { SUPPORTED_LANGUAGES } from '../utils/constants';
-import {lang} from '../utils/languageConstant';
 import { changeLanguage } from '../utils/configSlice';
+
 
 const Header = () => {
   const user = useSelector(store => store.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const showGtpSearchView = useSelector((store)=>store.gtp.showGtpSearchView)
 
   const handleSignOut = () => {
     signOut(auth)
@@ -51,17 +52,17 @@ const handleLanguageChange = (e) =>{
 }
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b  from-black flex justify-between'>
-      <img className='w-48 z-20' src={logo} alt='Netflix.png' />
+    <div className='fixed w-screen px-8 py-2 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between z-30'>
+      <img className=' w-48  mx-auto md:mx-0 ' src={logo} alt='Netflix.png' />
       { 
-       user && (<div className='flex p-2'>
-        <select className='py-2 px-4 mx-4 my-2 rounded-lg bg-gray-900 text-white z-30' onChange={handleLanguageChange}>
+       user && (<div className='flex p-2 justify-center'>
+       { showGtpSearchView && <select className='py-2 px-4 mx-4 my-2 rounded-lg bg-gray-900 text-white ' onChange={handleLanguageChange}>
                {SUPPORTED_LANGUAGES.map((lang)=>(
                 <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
                ))}
-        </select>
-          <button className='py-2 px-4 mx-4 my-2 bg-purple-800 rounded-lg z-30' onClick={handleGtpSearchClick}>Search with GTP</button>
-          <button className='text-white bg-red-700 rounded-lg p-2 m-2 hover:border-red-500 z-30' onClick={handleSignOut} >Sign out</button>
+        </select>}
+          <button className='py-2 px-4 mx-4 my-2 bg-purple-800 rounded-lg ' onClick={handleGtpSearchClick}>{ showGtpSearchView ? "Homepage":"Search with GTP"}</button>
+          <button className='text-white bg-red-700 rounded-lg p-2 m-2 hover:border-red-500 ' onClick={handleSignOut} >Sign out</button>
         </div>)
      }
     </div>
