@@ -47,8 +47,13 @@
   - WE are build the search bar 
   - buttom of the search bar give the movie suggestion 
   - Multilangual features in our app
-  - integrate gtp  API
-  - 
+  - integrate with Gemini API
+  - Adding movieNAmes and MovieResults in redux movie store
+  - Making search funacanality for movies
+  - Reuse the movielist component inside gtp movie suggestion
+  - Memoization (we reduce the number of fetching to server)
+  - Making responsive the website in reverse order
+  - deploye on github....
 
 
   # Features
