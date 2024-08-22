@@ -9,7 +9,7 @@ const GtpSearch = () => {
     <div className='absolute -z-10'>
        <img className='fixed h-screen w-screen object-cover' src={bgImage} alt="backgroung/img"  />
     </div>
-    <div className='pt-[30%] md:p-0'>
+    <div className='pt-[40%] md:p-0'>
         <GtpSearchBar/>
         <GtpMovieSuggestion/>
     </div>

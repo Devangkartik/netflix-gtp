@@ -18,4 +18,3 @@ export const SUPPORTED_LANGUAGES = [
 { identifier: "spanish", name: "Spanish" }
 ];
 
-// export const GEMINI_SEARCH_KEY = process.env.REACT_APP_GEMINI_SEARCH_KEY;

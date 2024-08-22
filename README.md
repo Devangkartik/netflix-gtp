@@ -66,7 +66,7 @@
   -logIn
     -Header
     -Main movie
-       -Trailer in Background
+       -Trailer in Backgroundp
        -Movie Tittle in description
          -Movie Suggestion * n number of rows
          -movie card list + which is vertical scrollable
