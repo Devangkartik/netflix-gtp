@@ -41,7 +41,7 @@ const GtpSearchBar = () => {
   // console.log(text);
   }
   return (
-    <div className='pt-[20%] mx-4 flex justify-center '>
+    <div className='pt-[20%] flex justify-center '>
       <form className='w-full md:w-1/2 bg-black grid grid-cols-12' onSubmit={(e)=>e.preventDefault()}>
       <input ref={searchQuery} type="text" className='p-4 m-2 rounded-lg col-span-8 text-black' placeholder={lang[langKey].placeholder}/>
       <button className='p-4 m-2 bg-red-700 text-white rounded-lg col-span-4' onClick={handleGeminiSearchClick}>{lang[langKey].search}</button>

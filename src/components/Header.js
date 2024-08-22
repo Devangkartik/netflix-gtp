@@ -56,7 +56,7 @@ const handleLanguageChange = (e) =>{
       <img className=' w-48  mx-auto md:mx-0 ' src={logo} alt='Netflix.png' />
       { 
        user && (<div className='flex p-2 justify-center'>
-       { showGtpSearchView && <select className='p-2 m-2 md:py-2 md:px-4 md:mx-4 my-2 rounded-lg bg-gray-900 text-white ' onChange={handleLanguageChange}>
+       { showGtpSearchView && <select className='py-2 px-4 mx-4 my-2 rounded-lg bg-gray-900 text-white ' onChange={handleLanguageChange}>
                {SUPPORTED_LANGUAGES.map((lang)=>(
                 <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
                ))}
